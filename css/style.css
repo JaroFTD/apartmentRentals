@@ -3641,7 +3641,7 @@ body._pseudo .header::after {
 }
 @media (max-width: 47.99875em) {
   .feedback__forms {
-    min-width: none;
+    min-width: auto;
   }
 }
 .feedback__title {
