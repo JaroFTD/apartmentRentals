@@ -908,8 +908,8 @@ body._pseudo .header::after {
     background-color: rgba(83, 83, 83, 0.48);
     -webkit-backdrop-filter: blur(2.5px);
             backdrop-filter: blur(2.5px);
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
   .menu__box._active {
     left: 0;
@@ -924,11 +924,34 @@ body._pseudo .header::after {
     overflow: auto;
     top: 0;
     background-color: #2B7AF1;
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     padding: 7.1875rem 0.9375rem 0.9375rem 1.25rem;
   }
+  .menu__body::after {
+    content: "";
+    position: fixed;
+    width: 50%;
+    left: -200%;
+    top: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #2B7AF1;
+  }
+  @supports (height: clamp( 4.0625rem , 3.0726010101rem  +  4.9494949495vw , 7.125rem )) {
+    .menu__body::after {
+      height: clamp( 4.0625rem , 3.0726010101rem  +  4.9494949495vw , 7.125rem );
+    }
+  }
+  @supports not (height: clamp( 4.0625rem , 3.0726010101rem  +  4.9494949495vw , 7.125rem )) {
+    .menu__body::after {
+      height: calc(4.0625rem + 3.0625 * (100vw - 20rem) / 61.875);
+    }
+  }
   .menu__body._active {
+    left: 0;
+  }
+  .menu__body._active::after {
     left: 0;
   }
 }
