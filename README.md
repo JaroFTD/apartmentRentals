@@ -1,4 +1,4 @@
-<h1><a href="https://yaloftd.github.io/apartmentRentals/">Многостраничный сайт</a> компании по аренде квартир</h1>
+<h1><a href="https://jaroftd.github.io/apartmentRentals/">Многостраничный сайт</a> компании по аренде квартир</h1>
 <ul>
   <li>Адаптив до 320px;</li>
   <li>Меню бургер;</li>
